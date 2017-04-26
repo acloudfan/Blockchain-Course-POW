@@ -1,6 +1,9 @@
 /**
  * Demonstrates a Highly-SIMPLIFIED example of Proof-Of-Work puzzle
  */
+
+// Sample data - reprensenting block data
+// For testing set to current date
 var data = new Date();
 
 solvePuzzle(data, "0");
@@ -34,9 +37,9 @@ function solvePuzzle(blockdata, difficultyPrefix) {
     var timeTaken = end - start;
     if (timeTaken == 0) {
         // Nonce not found
-        console.log("Deifficulty=", difficultyPrefix, " Nonce not found!!!")
+        console.log("Difficulty=", difficultyPrefix, " Nonce not found!!!")
     } else {
-        console.log("Deifficulty=", difficultyPrefix," Time(ms)=", timeTaken, " Nonce=", nonce,  " Hash=", SHA256(blockdata + nonce))
+        console.log("Difficulty=", difficultyPrefix," Time(ms)=", timeTaken, " Nonce=", nonce,  " Hash=", SHA256(blockdata + nonce))
     }
 }
 
